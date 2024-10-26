@@ -126,20 +126,68 @@ esPalindromo('orejero');
 
 /** Crea una función que, dada una array de números, devuelva una nueva array que tenga 
     solo los números que son 5 o más. Ejemplo entrada [3, 6, 8, 2] salida [6, 8]. */    
-function arrayNumeros[3, 6, 8, 2, 9, 1]
-    arrayNros[3, 6, 8, 2, 9, 1]
-
-    for (let index = 0; index < arrayNros.length; index++) {
-        if ( arrayNros[a] > 5 )
-            arrayNrosMayor += array
-    
+let arrayNrosMayor = []; // Inicializamos [arrayNrosMayor] como un array
+let arraySumaNrosMayor = [0]; // Inicializamos [arraySumaNrosMayor] como un array
+function arrayNumeros(){
+    arrayNumeros = [3, 6, 8, 2, 9, 1]; // damos valores al [arrayNumeros]
+    for (let i = 0; i < arrayNumeros.length; i++) {
+        if ( arrayNumeros[i] > 5 ) {
+            arrayNrosMayor.push(arrayNumeros[i]); // guardamos nros >5
+            arraySumaNrosMayor[0] += arrayNumeros[i];
+        }
+    } 
 }
-    
+arrayNumeros();  // ejecutamos la Funcion...
+console.log(arrayNrosMayor); // Mostramos los valores >5  
+console.log("-------------------------");
+console.log(arraySumaNrosMayor); // Mostramos el valor final luego de acumular los nros >5 
+
+/**Crea  la  función  *getPrecioMostrar*  para  que  devuelva  una 
+cadena de texto con formato precio con dos decimales. 
+Para 2 debería devolver 2.00 €.  
+o  Si  la  función  no  recibe  un  número  debería  devolver 
+devolver 'no es un formato correcto'.  */
+function getPrecioMostrar(valor) {
+    // Verificamos si el valor es un número
+    if (typeof valor !== 'number' || isNaN(valor)) {
+        return 'formato incorrecto, NO es un NRO.';
+    }
+    // Formateamos el número (con toFixed(2)) a dos decimales y añadimos el símbolo de euro
+    return valor.toFixed(2) + ' €';
+}
+// usamos la Funcion pasandole "valores", Ejemplos... 
+console.log(getPrecioMostrar(2));         // "2.00 €"
+console.log(getPrecioMostrar(10.5));      // "10.50 €"
+console.log(getPrecioMostrar('Hola'));    // "no es un formato correcto"
+console.log(getPrecioMostrar(NaN));       // "no es un formato correcto"
+console.log(getPrecioMostrar(null));      // "no es un formato correcto"
+
 /** Crea una función que nos pida un número por prompt y que nos indique 
     si es o no un número primo.   Debe devolver true si es primo, 
     sino false.      Un número primo es aquel que solo puede dividirse 
     entre 1 y sí mismo. Por ejemplo: 25 no es primo, 
-    ya que 25 es divisible entre 5, sin embargo, 17 si es primo. */    
-
-
+    ya que 25 es divisible entre 5, sin embargo, 17 si es primo. */  
+let peticion = prompt("introduce un nro");
+// hace la Funcion con *parametro* (z), luego cuando ejecuta/llama a
+// la Funcion le pasa como parametro: la variable *peticion* (= al nro introducido)
+// de esta forma la Funcion "nroPrimo" se puede usar cuando a necesitemos 
+// y en cada caso le pasaremos el parametro previsto
+function nroPrimo(z) {
+    if (typeof z == "number") {
+        let x = 0;
+        for (let i=0; i<=a; i++) {
+            if (z % i == 0) {
+                x++
+            }
+        }
+        if (x==2) {
+            alert("*peticion* es un nuro PRIMO!!")
+        }
+        else{
+            alert ("*peticion* NNOO es un nro PRIMO");
+        }
+    }
+}
+peticion += peticion;
+nroPrimo(peticion);
     
